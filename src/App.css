@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+.box, .box2 {
+  height: 15vh;
+  width: full;
+  border: solid 1px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box2 {
+  height: 10vh;
+  border-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+p {
+  text-align: left;
+}
+
+/* .signbox {
+  width: 3rem;
+} */
+
+.card {
+  /* padding: 1.25rem; */
+  position: relative;
+  height: 400px;
+  width: full;
+  border: solid 1px black;
+}
+
+.lcard, .longcard {
+  height: 12rem;
+  width: 55rem;
+  border: solid 1px black;
+}
+
+.card:hover .layout {
+  background-color: #fff;
+  opacity: 0.5; 
+}
+
+.layout {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  place-items: center;
+}
+
+.longcard {
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .box, .box2 {
+    height: 10vh;
+    width: full;
+    border: solid 1px black;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .box2 {
+    height: 7vh;
+    border-top: 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    height: 350px;
+    width: full;
+    border: solid 1px black;
   }
+  
+  .lcard, .longcard {
+    height: 8rem;
+    width: 32rem;
+    border: solid 1px black;
+  }
+
+  .longcard {
+    height: auto;
+  }
+
+  /* .category {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: fit-content;
+    width: fit-content;
+    border: solid 1px black;
+  } */
+
 }
+
+.btn {
+  height: 2.5rem;
+  width: 8rem;
+  border: solid 1px rgb(207, 20, 20)
+}
+
+.btntxt {
+  color: rgb(240, 7, 7);
+}
+
+.category {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 2rem;
+  width: fit-content;
+  border: solid 1px black;
+}
+
+/* .category>div:third-child {
+  grid-column: span 2;
+} */
+
+.underlink {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#111, #111);
+  background-size: 0 1px;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  transition: background-size .3s ease-in-out;
+  text-decoration-skip-ink: auto;
+}
+
+.underlink:hover {
+  background-size: 100% 1px;
+  background-position: 50% 90%
+}
+
+.redlink {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(239 68 68), rgb(239 68 68));
+  background-size: 0 1px;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  transition: background-size .3s ease-in-out;
+  text-decoration-skip-ink: auto;
+}
+
+.redlink:hover {
+  background-size: 100% 1px;
+  background-position: 50% 90%
+}
+
+.whitelink {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#ffff, #ffff);
+  background-size: 0 1px;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  transition: background-size .3s ease-in-out;
+  text-decoration-skip-ink: auto;
+}
+
+.whitelink:hover {
+  background-size: 100% 1px;
+  background-position: 50% 90%
+}
+
+.ccard {
+  background-color: #1B1B1B;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display&display=swap');

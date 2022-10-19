@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import Home from './Pages/Home'
+import About from './Navbar/About'
+import Articles from './Navbar/Articles'
+import Books from './Navbar/Books'
+import Enrollment from './Navbar/Enrollment'
+import Events from './Navbar/Events'
+import Research from './Navbar/Research'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-function App() {
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
+export default function App() {
+
+  useEffect(() => {
+    Aos.init({duration: 700})
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route exact path='/about' element={<About/>}/>
+          <Route exact path='/events' element={<Events/>}/>
+          <Route exact path='/research' element={<Research/>}/>
+          <Route exact path='/articles' element={<Articles/>}/>
+          <Route exact path='/books' element={<Books/>}/>
+          <Route exact path='/enrollment' element={<Enrollment/>}/>
+        </Routes>        
+      </Router>
     </div>
-  );
+  )
 }
-
-export default App;
